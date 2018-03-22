@@ -1,3 +1,5 @@
+var _element;
+
 function pathClick(e) {
 	var pathId = e.path[0].id;
 	var element = d3.select('#'+ pathId);
@@ -13,6 +15,16 @@ function pathClick(e) {
 		colorApply ='brown';
 	}
 	element.style('fill', colorApply);
+}
+function showModal(e){
+	_element = getPathElement(e);
+	console.log("Path Id"+ _element);
+}
+
+function getPathElement(e) {
+	var pathId = e.path[0].id;
+	var element = d3.select('#'+ pathId);
+	return element;
 }
 function submitInfo(e) {
 	e.preventDefault();
@@ -31,3 +43,23 @@ function findPos(obj) {
     return [curtop];
     }
 }
+function enrolledClick() {
+	_element.style('fill', 'brown');
+	$('#myModal').modal('hide');
+}
+function inProgressClick() {
+	_element.style('fill', 'yellow');
+	$('#myModal').modal('hide');
+}
+
+function completedClick() {
+	_element.style('fill', 'green');
+	$('#myModal').modal('hide');
+}
+
+// $(document).ready(function() {
+//  // $("#aPath").click(function(e){
+//  // 	element =  getPathElement(e);
+//  //      // document.getElementById("modalContent").innerHTML = "Farmer Name : Nareddy Praveen";  
+//  //   }); 
+// }); 

@@ -9,6 +9,7 @@
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
+<script src="js/jquery-2.2.3.min.js"></script> 
 <body>
 <div class="col-md-5  agileits_mail_grid_left">
 <form  onSubmit="submitInfo(event)">
@@ -43561,7 +43562,7 @@
              id="path30610"
              style="fill:none;stroke:#00ffff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              d="m 3745,632 1,0 1,0 1,0 1,0 1,0 2,1 1,0 2,1 1,0 2,0 1,0 1,0 1,-1 2,-1 1,0 2,0 1,0 1,0 2,1 1,0 2,1 2,0 2,-1 1,-1" />
-             <a xlink:href='javascript:;' onclick='pathClick(event)'>
+            <a href="#" data-toggle="modal" data-target="#myModal" onClick="showModal(event)">
         <path
              id="path30612"
              style="fill:#b2d905;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.0"
@@ -43677,9 +43678,27 @@
              id="path30678"
              style="fill:none;stroke:#000000;stroke-width:19;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              d="m 4013,5788 0,1 0,8 0,1" /></g></g></g></g>
-</div>
+</div></svg>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa fa-pagelines" aria-hidden="true"></i>EarthWorm
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                        
+                </div>
+                <section>
+                    <div class="modal-body" id="modalContent">
+                    <input type="submit" value="Enrolled" onClick="enrolledClick()">
+                    <input type="submit" value="In progress" onClick="inProgressClick()">
+                    <input type="submit" value="Completed" onClick="completedClick()">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 </svg>
 <script src="js/map_d3.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </head>
 </html>
